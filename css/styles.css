@@ -1,0 +1,166 @@
+:root {
+  --clr-accent: hsl(21, 99%, 65%);
+  --clr-accent-dark: hsl(20, 79%, 55%);
+  --clr-primary: hsl(49, 67%, 95%);
+  --clr-primary-light: hsl(240, 33%, 100%);
+  --clr-secondary: hsl(210, 10%, 23%);
+  --clr-secondary-light: hsl(210, 16%, 93%);
+  --clr-red: hsl(359, 77%, 41%);
+
+  --ff-accent: "Oswald", sans-serif;
+  --ff-base: "Poppins", sans-serif;
+}
+/*      RESET      */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*      GLOBALS       */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--clr-neutral-light);
+  color: var(--clr-secondary);
+  font-family: var(--ff-base);
+  font-size: 1.6rem;
+  height: 100vh;
+  line-height: 1.5;
+
+  display: grid;
+  place-content: center;
+}
+
+fieldset {
+  border: none;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+input,
+button {
+  border-radius: 0.5rem;
+  outline: none;
+  transition: 0.25s ease-in-out;
+}
+
+/*      UTILITY      */
+.flex {
+  display: flex;
+}
+
+/*      SIGN UP       */
+.sign-up {
+  background-color: var(--clr-primary);
+  border-radius: 1rem;
+  width: 80vw;
+}
+
+.sign-up__img {
+  position: relative;
+  flex-basis: 50%;
+}
+
+.sign-up__img img {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.sign-up__img figcaption {
+  color: var(--clr-primary-light);
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 3rem;
+}
+
+.sign-up__img figcaption a {
+  color: var(--clr-primary);
+}
+
+.sign-up__content {
+  padding: 1rem 4rem 1rem 4rem;
+
+  flex-basis: 50%;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.sign-up__title {
+  font-family: var(--ff-accent);
+  font-size: calc(1.6rem + 1vw);
+}
+
+.sign-up__text span {
+  display: block;
+  margin-top: 2rem;
+}
+
+.sign-up__form {
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.sign-up__form fieldset {
+  column-gap: 2rem;
+}
+
+.sign-up__form fieldset div {
+  width: 100%;
+
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.sign-up__form fieldset div input {
+  border: 2px solid var(--clr-secondary-light);
+  padding: 1rem;
+}
+
+.sign-up__form fieldset div input:focus {
+  border: 2px solid var(--clr-accent);
+}
+
+.sign-up__form fieldset div input.error {
+  border-color: var(--clr-red);
+}
+
+.error-message {
+  color: var(--clr-red);
+  font-size: 1rem;
+}
+
+.sign-up__form fieldset div label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.sign-up__form button {
+  border: none;
+  background-color: var(--clr-accent);
+  font-size: 1.6rem;
+  padding: 2rem 0 2rem 0;
+}
+
+.sign-up__form button:hover {
+  background-color: var(--clr-accent-dark);
+}
+
+.sign-up__content a {
+  color: var(--clr-accent);
+  margin-left: 0.5rem;
+  text-decoration: none;
+}

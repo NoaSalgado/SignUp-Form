@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/app.js"></script>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="sign-up flex">
+        <figure class="sign-up__img">
+          <img src="./img/sign-up-image.jpg" alt="Grand Canyon" />
+          <figcaption>
+            Photo by
+            <a
+              href="https://unsplash.com/@tommorbey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Tom Morbey</a
+            >
+            on
+            <a
+              href="https://unsplash.com/es?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Unsplash</a
+            >
+          </figcaption>
+        </figure>
+
+        <div class="sign-up__content flex">
+          <h1 class="sign-up__title">Sign Up <em>now</em> to get started!</h1>
+          <p class="sign-up__text">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+            <span>You <em>know</em> you want to.</span>
+          </p>
+
+          <form class="sign-up__form flex">
+            <fieldset class="flex">
+              <div class="flex">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name"
+                minlength="3" " placeholder="Laura" />
+              </div>
+
+              <div class="flex">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" minlength="3"
+                " placeholder="Smith" />
+              </div>
+            </fieldset>
+
+            <fieldset class="flex">
+              <div class="flex">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="hello@mydomain.com"
+                />
+              </div>
+
+              <div class="flex">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                  placeholder="123-456-7899"
+                />
+              </div>
+            </fieldset>
+
+            <fieldset class="flex">
+              <div class="flex">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  minlength="8"
+                />
+                <p class="error-message">*Passwords do not match</p>
+              </div>
+
+              <div class="flex">
+                <label for="rep-password">Repeat Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="rep-password"
+                  minlength="8"
+                />
+              </div>
+            </fieldset>
+
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#">Sign In</a></p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
