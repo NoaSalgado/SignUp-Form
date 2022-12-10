@@ -28,9 +28,9 @@ body {
   background-color: var(--clr-neutral-light);
   color: var(--clr-secondary);
   font-family: var(--ff-base);
-  font-size: 1.6rem;
-  height: 100vh;
+  font-size: calc(1.2rem + 0.5vw);
   line-height: 1.5;
+  min-height: 100vh;
 
   display: grid;
   place-content: center;
@@ -41,7 +41,6 @@ fieldset {
 }
 
 img {
-  display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -60,15 +59,20 @@ button {
 }
 
 /*      SIGN UP       */
+.main {
+  padding: 4rem 0 4rem 0;
+}
+
 .sign-up {
   background-color: var(--clr-primary);
   border-radius: 1rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   width: 80vw;
 }
 
 .sign-up__img {
   position: relative;
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .sign-up__img img {
@@ -78,7 +82,7 @@ button {
 
 .sign-up__img figcaption {
   color: var(--clr-primary-light);
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   width: 100%;
   position: absolute;
@@ -90,9 +94,8 @@ button {
 }
 
 .sign-up__content {
-  padding: 1rem 4rem 1rem 4rem;
+  padding: 2rem 4rem 2rem 4rem;
 
-  flex-basis: 50%;
   flex-direction: column;
   row-gap: 2rem;
 }
@@ -113,7 +116,7 @@ button {
 }
 
 .sign-up__form fieldset {
-  column-gap: 2rem;
+  gap: 2rem;
 }
 
 .sign-up__form fieldset div {
@@ -139,6 +142,11 @@ button {
 .error-message {
   color: var(--clr-red);
   font-size: 1rem;
+  visibility: hidden;
+}
+
+.error-message.display {
+  visibility: visible;
 }
 
 .sign-up__form fieldset div label {
@@ -151,7 +159,7 @@ button {
 .sign-up__form button {
   border: none;
   background-color: var(--clr-accent);
-  font-size: 1.6rem;
+  font-size: calc(1.2rem + 0.5vw);
   padding: 2rem 0 2rem 0;
 }
 
@@ -163,4 +171,16 @@ button {
   color: var(--clr-accent);
   margin-left: 0.5rem;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sign-up__img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .sign-up__form fieldset {
+    flex-direction: column;
+  }
 }

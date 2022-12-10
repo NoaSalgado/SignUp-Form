@@ -46,13 +46,13 @@
               <div class="flex">
                 <label for="first-name">First Name</label>
                 <input type="text" name="first-name" id="first-name"
-                minlength="3" " placeholder="Laura" />
+                minlength="3" " placeholder="Laura" required/>
               </div>
 
               <div class="flex">
                 <label for="last-name">Last Name</label>
                 <input type="text" name="last-name" id="last-name" minlength="3"
-                " placeholder="Smith" />
+                " placeholder="Smith" required />
               </div>
             </fieldset>
 
@@ -64,6 +64,7 @@
                   name="email"
                   id="email"
                   placeholder="hello@mydomain.com"
+                  required
                 />
               </div>
 
@@ -75,6 +76,7 @@
                   id="phone"
                   pattern="\d{3}[\-]\d{3}[\-]\d{4}"
                   placeholder="123-456-7899"
+                  required
                 />
               </div>
             </fieldset>
@@ -87,6 +89,7 @@
                   name="password"
                   id="password"
                   minlength="8"
+                  required
                 />
                 <p class="error-message">*Passwords do not match</p>
               </div>
@@ -98,6 +101,7 @@
                   name="password"
                   id="rep-password"
                   minlength="8"
+                  required
                 />
               </div>
             </fieldset>
